@@ -1,0 +1,171 @@
+*, ::before, ::after{
+  margin: 0;
+  padding: 0;
+  box-sizing: inherit;
+}
+
+html, body{
+  box-sizing: border-box;
+  font-size: 11px; text-align: center;
+  font-family: 'Kumbh Sans', sans-serif;
+  color: hsl(228, 45%, 44%);
+  background-color: hsl(185, 75%, 39%);
+  overflow: hidden;
+  width: 100vw;
+  height: 100vh;
+}
+
+.circle-top{
+    right: 50%;
+    bottom: 43%;
+    position: fixed;
+    transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 0.6);
+}
+
+.circle-bottom{
+  top: 50%;
+   left: 50%;
+   position: fixed;
+   transition: 0.5s cubic-bezier(0.075, 0.82, 0.165, 0.6);
+}
+
+.card{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) translateY(0);
+  width: 330px;
+  height: 380px;
+  background-color: white;
+  border-radius: 20px;
+  overflow: hidden;
+  box-shadow: 0px 0px 80px hsl(229, 23%, 23%, 0.5);
+  animation: card-jump 0.5s ease-in-out;
+}
+
+@keyframes card-jump {
+  0%{
+    transform: translate(-50%, -50%) translateY(15px);
+    opacity: 0;
+  }
+  100%{
+    transform: translate(-50%, -50%) translateY(0);
+    opacity: 1;
+  }
+}
+
+.card-top{
+  height: 300px;
+  position: relative;
+}
+
+.bg{
+  height: 50%;
+}
+
+.bg-img{
+  height: 100%;
+}
+
+.profile-img{
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%) scale(1);
+  width:100px;
+  height: 100px;
+  border-radius: 50%;
+  z-index: 5;
+  border: 5px solid white;
+  overflow: hidden;
+  background-image: url(../images/image-Victor.jpg);
+  background-size: cover;
+  transition: 0.3s ease;
+}
+
+.profile-img:hover {
+  transform: translate(-50%, -50%) scale(1.25);
+}
+
+.person-details{
+  background-color: white;
+  height: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  border-bottom: 1px solid hsl(0, 0%, 59%, 0.4);
+}
+
+#person-name{
+  color: hsl(229, 23%, 23%);
+  margin: 50px 0px 15px 0px;
+  font-size: 18px;
+  font-weight: 700;
+}
+
+#detail-clr{
+  font-weight: 300;
+  font-size: 18px;
+  color: hsl(227, 10%, 46%);
+}
+
+#person-city{
+  color: hsl(227, 10%, 46%);
+  font-size: 14px;
+}
+
+.card-bottom{
+  margin: 0 auto;
+  background-color: white;
+  width: 80%;
+  height: 80px;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+.number-bottom {
+  font-size: 18px;
+  font-weight: 700;
+  color: hsl(229, 23%, 23%);
+  margin: 7px 0px;
+  transition: 0.3s ease;
+}
+
+.name-bottom {
+  font-size: 12px;
+  font-weight: 300;
+  color: hsl(227, 10%, 46%);
+}
+
+.number-bottom:hover{
+  color : hsl(185, 75%, 39%);
+}
+
+.attribution{
+  display: block;
+  width: 80%;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: 25px;
+  margin: 0 auto;
+  color: hsl(229, 23%, 23%);
+  font-size: 14px;
+  font-weight: 300;
+}
+
+.attribution a{
+  text-decoration:none;
+  color: hsl(229, 23%, 23%);
+  font-weight: 700;
+}
+
+@media (max-width: 350px){
+  .card{
+    width : 90%;
+    min-width: 150px;
+    transition: 0.3s cubic-bezier(0.075, 0.82, 0.165, 0.6);
+  }
+}
