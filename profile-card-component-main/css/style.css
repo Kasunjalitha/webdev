@@ -78,7 +78,7 @@ html, body{
   z-index: 5;
   border: 5px solid white;
   overflow: hidden;
-  background-image: url(../images/image-Victor.jpg);
+  background-image: url(/images/image-Victor.jpg);
   background-size: cover;
   transition: 0.3s ease;
 }
