@@ -1,0 +1,167 @@
+*,
+::after,
+::before {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  width: 100%;
+  font-family: "Poppins", sans-serif;
+}
+
+.wrapper {
+  /* border: 1px solid black; */
+  width: 90%;
+  height: fit-content;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  align-content: flex-start;
+}
+
+.item {
+  min-height: fit-content;
+  /* border: 1px solid black; */
+  padding: 15px;
+}
+
+/* .item:nth-child(1) {
+  background-color: rgb(193, 231, 158);
+}
+.item:nth-child(2) {
+  background-color: aqua;
+}
+.item:nth-child(3) {
+  background-color: rgb(231, 173, 158);
+}
+.item:nth-child(4) {
+  background-color: rgb(188, 162, 247);
+} */
+
+.gig {
+  width: 100%;
+  min-height: 100%;
+  border: 1px solid rgba(173, 173, 173, 0.7);
+  border-radius: 5px;
+  cursor: pointer;
+  transition: all 0.25s ease-in-out;
+}
+
+.gig:hover {
+  box-shadow: 1px 1px 10px rgb(0, 0, 0, 0.4);
+}
+
+.gig-img {
+  width: 100%;
+}
+
+.seller-profile {
+  display: flex;
+  align-items: center;
+}
+
+.seller-profile-pic {
+  width: 30px;
+  border-radius: 50%;
+  border: 1px solid gray;
+  margin-right: 10px;
+}
+
+.rating-star {
+  width: 15px;
+  color: rgb(252, 206, 79);
+}
+
+.seller-type {
+  color: rgb(252, 206, 79);
+}
+
+.rating-val {
+  color: rgb(252, 206, 79);
+  font-weight: bold;
+}
+
+.gig-raing {
+  display: flex;
+  align-items: center;
+}
+
+.rating-out-of {
+  color: rgb(173, 173, 173);
+  margin-left: 2px;
+}
+
+.rating-val {
+  margin-left: 8px;
+}
+
+.gig-description {
+  margin: 12px 0;
+}
+
+.gig-price-info {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px 15px;
+  border-top: 1px solid rgb(173, 173, 173, 0.3);
+}
+
+.gig-add-to-favourite {
+  color: rgb(173, 173, 173);
+}
+
+.gig-raing {
+  position: absolute;
+  bottom: 10px;
+  left: 15;
+}
+
+.gig-price {
+  font-size: 1.4rem;
+}
+
+.gig-info-container {
+  min-height: 150px;
+  padding: 10px 15px;
+  position: relative;
+}
+
+.gig-price-info {
+  height: 50px;
+}
+
+.seller-name,
+.seller-type,
+.price-text {
+  font-size: 0.8rem;
+}
+
+@media only screen and (min-width: 1160px) {
+  .item {
+    width: 25%;
+  }
+}
+
+@media only screen and (max-width: 1160px) {
+  .item {
+    width: 33.3333%;
+  }
+}
+
+@media only screen and (max-width: 900px) {
+  .item {
+    width: 50%;
+  }
+}
+
+@media only screen and (max-width: 600px) {
+  .item {
+    width: 100%;
+  }
+}
